@@ -22,4 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add click event listeners to the buttons
     homeButton.addEventListener("click", showHomePage);
     projectsButton.addEventListener("click", showProjectsPage);
+
+    // Function to activate the description pop-up effect on scroll
+    function activateDescriptions() {
+        const projectImages = document.querySelectorAll(".project-image");
+        const projectDescriptions = document.querySelectorAll(".project-description");
+
+        projectImages.forEach((image, index) => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                projectDescriptions[index].classList.add("active");
+            }
+        });
+    }
+
+    // Add scroll event listener to trigger the description pop-up effect
+    window.addEventListener("scroll", activateDescriptions);
 });
