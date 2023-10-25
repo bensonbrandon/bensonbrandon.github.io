@@ -28,3 +28,16 @@ img {
 }
 
 /* Customize further with your own CSS styles */
+/* Add this CSS to control the visibility of project descriptions */
+.project-description {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Add this CSS to trigger the description pop-up effect on scroll */
+.project-description.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
