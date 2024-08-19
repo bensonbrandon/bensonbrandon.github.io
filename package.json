@@ -1,6 +1,5 @@
 {
   "name": "personal-website",
-  "homepage": "https://bensonbrandon.github.io",
   "output-path": "build",
   "version": "0.1.0",
   "private": true,
